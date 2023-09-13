@@ -1,0 +1,58 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#fff;
+	--color-headertje: #EA6724;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+/*https://www.dafont.com/dunkin.font*/
+
+@font-face {
+	font-family: DunkinDonuts;
+	src: url(/fonts/Dunkin.otf);
+}
+
+@font-face {
+	font-family: DunkinDonutsBold;
+	src: url(/fonts/Dunkin\ Bold.otf);
+}
+
+@font-face {
+	font-family: DunkinDonutsSans;
+	src: url(/fonts/Dunkin\ Sans.otf);
+}
+
+
+header p{
+	background-color: var(--color-headertje);
+	color: var(--color-background);
+	padding: 1em;
+	margin: 0em;
+	font-family: DunkinDonutsSansBook;
+	font-size: 60%;
+}
