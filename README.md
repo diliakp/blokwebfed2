@@ -16,14 +16,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+Dilia Porcelijn
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
- 
+responsive
+
 </details>
 
 
@@ -36,11 +36,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+https://www.dunkin.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="/images/www.dunkin.nl_(iPhone 12 Pro).jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
@@ -57,6 +57,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  - ik kon echt niet bewegen met dat ding op mijn arm
+  - mijn site is niet heel toegankelijk:
+BLINDHEID/VOICEOVER:
+  - de voiceover is engels terwijl de site nederlands is
+  - het gaat vrij snel
+  - niet alles wordt voorgelezen
+  - hij zegt elke keer "enter dutch" voordat het iets anders zegt
+  - het "blauwe vierkantje" gaat niet altijd mee met de tekst
+  - begint al met het lezen bij de animatie
 
 </details>
 
