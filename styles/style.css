@@ -1,11 +1,14 @@
-/**************/
+************
+
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-body{
+body {
 	margin: 0%;
 }
 
@@ -19,8 +22,8 @@ body{
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#fff;
+	--color-text: #111;
+	--color-background: #fff;
 	--color-headertje: #F36E21;
 	--color-extras: #F1F2F2;
 	--color-roze: #EC128D;
@@ -30,6 +33,7 @@ body{
 	--color-andergrijs: #f5f5f5;
 	--color-h4: #512d00;
 	--color-achtergrondplaatje: #DDBC8D;
+	--color-buttons-footer: #ED4D27;
 }
 
 img {
@@ -61,15 +65,16 @@ img {
 /****************/
 
 /* jouw code */
-/* translateY(-228px) scale(2) */
-/* geen position absolute */
-/* overflow: hidden op SECTION */
-/* verdere onzin weg */
+
+/* HOMEPAGE */
+/* HEADER */
 
 
-/* padding:0; */
+header {
+	background-color: var(--color-background);
+}
 
-header p{
+header p {
 	background-color: var(--color-headertje);
 	color: var(--color-background);
 	padding: 3%;
@@ -79,37 +84,44 @@ header p{
 	border: none;
 }
 
-header img{
+header img {
 	background-color: var(--color-extras);
 	padding: 3%;
-	width: 10%;
+	width: 5%;
 	margin: 6%;
 	border-radius: 40%;
 }
 
-h1{
-	display: flex;
-	justify-content: center;
-	margin-top: -18%;
-	font-family: 'DunkinDonutsBold';
-	text-transform: uppercase;
-	color: var(--color-headertje);
-}
-
-h1 span{
-	color: var(--color-roze)
-}
-
-header nav{
+header nav {
 	display: flex;
 	justify-content: end;
 	margin-top: -14%;
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(1) h2{
+header div{
+	margin: 0px 5px;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	margin-top: -20%;
+	font-family: 'DunkinDonutsBold';
+	text-transform: uppercase;
+	color: var(--color-headertje);
+}
+
+h1 span {
+	color: var(--color-roze)
+}
+
+/* WE LOVE COFFEE SECTION */
+
+.home section:nth-of-type(1) article:nth-of-type(1) h2 {
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	position: absolute;
+	left: 0;
 	color: var(--color-background);
 	font-size: 250%;
 	line-height: 1;
@@ -118,32 +130,46 @@ header nav{
 	justify-content: center;
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(1){
+.home section:nth-of-type(1) article:nth-of-type(1) {
 	margin: 7%;
 }
 
-.eersteartikel:nth-of-type(1) img:nth-of-type(1){
+.home section:nth-of-type(1) :nth-of-type(1) img:nth-of-type(1) {
 	background: var(--color-achtergrondplaatje);
 	border-radius: 1.5em;
 }
 
-.eersteartikel:nth-of-type(1) img:nth-of-type(2){
+.home section:nth-of-type(1) article:nth-child(1) {
 	position: relative;
-	position: absolute;
-	width: 30%;
-	height: 30%;
-	left: 35%;
-	top: 23%;
+	overflow: hidden;
+	height: 21.5em;
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(2){
+.home section:nth-of-type(1) img:nth-of-type(2), section:nth-of-type(1) img:nth-of-type(3), section:nth-of-type(1) img:nth-of-type(4) {
+	width: 50%;
+	transform: translateY(-228px) scale(.70);
+}
+
+.home section:nth-of-type(1) img:nth-of-type(3){
+	transform: translateY(-600px) scale(.70) translateX(250px);
+}
+
+.home section:nth-of-type(1) img:nth-of-type(4){
+	transform: translateY(-930px) scale(1.1) translateX(80px);
+}
+
+
+
+/* BESTEL SECTION */
+
+.home section:nth-of-type(1) article:nth-of-type(2) {
 	background-color: var(--color-roze);
 	padding: 6%;
-	margin: 2%;
+	margin: 5%;
 	border-radius: 2em;
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(2) h2{
+.home section:nth-of-type(1) article:nth-of-type(2) h2 {
 	color: var(--color-background);
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
@@ -153,12 +179,17 @@ header nav{
 	margin: 0%;
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(2) {
+.home section:nth-of-type(1) article:nth-of-type(2) {
 	color: var(--color-background);
 	font-family: 'DunkinDonutsSansBook';
 }
 
-.eersteartikel:nth-of-type(1) section:nth-of-type(2) button {
+.home section:nth-of-type(1) article:nth-of-type(2) p{
+	text-transform: none;
+}
+
+
+.home section:nth-of-type(1) article:nth-of-type(2) button {
 	font-family: 'DunkinDonutsBold';
 	width: 50vw;
 	height: 5vh;
@@ -167,35 +198,54 @@ header nav{
 	border: none;
 }
 
-.buttons-bestel{
+.home section:nth-of-type(1) div {
 	display: flex;
 	justify-content: center;
 	text-decoration: none;
 	gap: 5%;
 }
 
-.buttons-bestel button:nth-child(1){
+.home section:nth-of-type(1) div button:nth-child(1) {
 	color: var(--color-roze);
 }
 
-.buttons-bestel button:nth-child(2){
+.home section:nth-of-type(1) div button:nth-child(2) {
 	background-color: var(--color-accentje);
 	color: var(--color-background);
 }
 
-.eersteartikel section:nth-of-type(3){
-	position: relative;
-	text-align: center;
-}
 
-.eersteartikel section:nth-of-type(3) h2{
+/* AJAX SECTION */
+
+.home section:nth-of-type(1) article:nth-of-type(3) {
+	background-color: var(--color-blue);
+	color: var(--color-background);
 	font-family: DunkinDonutsBold;
-	text-transform: uppercase;
-	display: flex;
-	justify-content: center;
+	border-radius: 2em;
+	margin: 5%;
+	height: 25em;
+	text-align: center;
+	overflow: hidden;
 }
 
-.bestel-dunkin-online h2{
+.home section:nth-of-type(1) article:nth-of-type(3) h2 {
+	text-transform: uppercase;
+	font-size: 300%;
+	text-align: center;
+	line-height: 0.9;
+	padding: 15%;
+	text-transform: uppercase;
+	transform: translateY(-12em);
+}
+
+.home section:nth-of-type(1) article:nth-of-type(3) img {
+	transform: translateY(6em) scale(1.2);
+}
+
+
+/* BESTEL DUNKIN ONLINE SECTION */
+
+.home section:nth-of-type(2) h2 {
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	font-size: 400%;
@@ -206,11 +256,11 @@ header nav{
 	color: var(--color-roze);
 }
 
-.bestel-dunkin-online h2 span{
+.home section:nth-of-type(2) h2 span {
 	color: var(--color-headertje);
 }
 
-.bestel-dunkin-online li{
+.home section:nth-of-type(2) li {
 	display: flex;
 	align-items: center;
 	background-color: var(--color-extras);
@@ -221,11 +271,11 @@ header nav{
 	gap: 15px;
 }
 
-.bestel-dunkin-online ol{
+.home section:nth-of-type(2) ol {
 	padding: 0%;
 }
 
-.bestel-dunkin-online h3{
+.home section:nth-of-type(2) h3 {
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
 	color: var(--color-roze);
@@ -234,12 +284,12 @@ header nav{
 	line-height: 1em;
 }
 
-.bestel-dunkin-online p{
+.home section:nth-of-type(2) p {
 	font-family: DunkinDonutsSansBook;
 	margin: 0%;
 }
 
-.bestel-dunkin-online img{
+.home section:nth-of-type(2) img {
 	background-color: var(--color-roze);
 	width: 25%;
 	height: 25%;
@@ -247,7 +297,7 @@ header nav{
 	padding: 0.8em;
 }
 
-.bestel-dunkin-online a{
+.home section:nth-of-type(2) a {
 	text-decoration: none;
 	background-color: var(--color-headertje);
 	color: var(--color-background);
@@ -258,54 +308,48 @@ header nav{
 	border-radius: 10em;
 }
 
+/* APP JIJ M AL SECTION */
 
-
-section:nth-of-type(2){
+.home section:nth-of-type(3) {
 	background-color: var(--color-blue);
 	color: var(--color-background);
-	font-family: 'DunkinDonuts';
 	border-radius: 2em;
+	margin: 5%;
+	height: 40em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.home section:nth-of-type(3) h2 {
+	font-family: DunkinDonutsBold;
+	margin: 10%;
+	font-size: 250%;
+	text-transform: uppercase;
+}
+
+.home section:nth-of-type(3) h3 {
+	font-family: DunkinDonutsBold;
+	text-transform: uppercase;
+}
+
+.home section:nth-of-type(3) p {
+	font-family: DunkinDonutsSansBook;
 	margin: 5%;
 }
 
-section:nth-of-type(2) h2{
-	text-transform: uppercase;
-	font-size: 300%;
-	text-align: center;
-	margin-top: 20%;
-	line-height: 0.9;
-	padding: 15%;
+
+.home section:nth-of-type(3) img:nth-of-type(3) {
+	transform: translateY(60px) scale(2);
 }
 
-section:nth-of-type(2) h3{
-	text-transform: uppercase;
-	display: flex;
-	justify-content: center;
-	font-size: 150%;
+/* OPROEP AAN VEGANS SECTION */
+
+.home section:nth-of-type(4) {
+	margin: 5%;
+	overflow: hidden;
 }
 
-section:nth-of-type(2) p{
-	font-family: 'DunkinDonutsSansBook';
-	text-align: center;
-	font-size: 120%;
-	margin: 2em;
-}
-
-section:nth-of-type(2) img{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-section:nth-of-type(3) img{
-	border-radius: 1em;
-	margin: 1em;
-}
-
-
-
-section:nth-of-type(3) h3{
+.home section:nth-of-type(4) h3 {
 	font-family: 'DunkinDonuts';
 	color: var(--color-roze);
 	font-size: 200%;
@@ -313,7 +357,7 @@ section:nth-of-type(3) h3{
 	margin: 5%;
 }
 
-section:nth-of-type(3) p{
+.home section:nth-of-type(4) p {
 	color: var(--color-paragraafjes);
 	font-family: 'DunkinDonutsSansBook';
 	margin: 5%;
@@ -322,7 +366,20 @@ section:nth-of-type(3) p{
 	align-items: end;
 }
 
-section:nth-of-type(3) a, section:nth-of-type(4) a, article:nth-of-type(2) a{
+.home section:nth-of-type(4) img {
+	border-radius: 2em;
+}
+
+
+/* ALLE BUTTONS/LINKJES */
+
+.home section:nth-of-type(3) a,
+.home section:nth-of-type(4) a,
+.home section:nth-of-type(5) a,
+.home article:nth-of-type(1) a,
+main a:last-child,
+.page2 section:nth-of-type(3) a
+{
 	background-color: var(--color-headertje);
 	color: var(--color-background);
 	font-family: 'DunkinDonutsBold';
@@ -336,15 +393,18 @@ section:nth-of-type(3) a, section:nth-of-type(4) a, article:nth-of-type(2) a{
 	margin-left: 5%;
 	margin-right: 5%;
 	font-size: 0.9em;
+	text-decoration: none;
 }
 
-section:nth-of-type(4) img{
+/* DEN BOSCH SECTION */
+
+.home section:nth-of-type(5) img {
 	border-radius: 2em;
 	margin: 5%;
-
+	width: 90%;
 }
 
-section:nth-of-type(4) h2{
+.home section:nth-of-type(5) h2 {
 	color: var(--color-headertje);
 	font-family: 'DunkinDonutsBold';
 	text-transform: capitalize;
@@ -353,7 +413,8 @@ section:nth-of-type(4) h2{
 	line-height: 0.9;
 }
 
-section:nth-of-type(4) p{
+
+.home section:nth-of-type(5) p {
 	color: var(--color-paragraafjes);
 	font-family: 'DunkinDonutsSansBook';
 	font-size: 120%;
@@ -361,30 +422,59 @@ section:nth-of-type(4) p{
 	line-height: 1.5;
 }
 
-article:nth-of-type(2){
+
+/* DD NIEUWS SECTION */
+
+.home article:nth-of-type(1) {
 	background-color: var(--color-andergrijs);
+	margin: 5%;
 }
 
-article:nth-of-type(2) section h2{
+.home article:nth-of-type(1) section h2 {
 	font-family: 'DunkinDonutsBold';
 	color: var(--color-headertje);
 	font-size: 300%;
 	grid-column-start: 1;
 	line-break: normal;
 	margin: 5%;
+	transform: translateY(30px);
+	line-height: 1.2;
 }
 
-article:nth-of-type(2) span{
+
+.home article:nth-of-type(1) span {
 	color: var(--color-roze);
 }
 
-article:nth-of-type(2) article img{
-	width: 80%;
-	border-radius: 2em;
-	margin: 5%;
+.home article:nth-of-type(1) div, 
+.page2 section:nth-of-type(3) div{
+	display: flex;
+	overflow-x: scroll;
 }
 
-article:nth-of-type(2) article h3{
+.home article:nth-of-type(1) article, 
+.page2 section:nth-of-type(3) article {
+	border: .25em solid var(--color-extras);
+	border-radius: 2em;
+	margin: 5%;
+	padding: 5%;
+
+}
+
+
+/* BRON: https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+
+.home article:nth-of-type(1) article img {
+	width: 100%;
+	padding: 5%;
+	border-radius: 2em;
+	margin: 5%;
+	height: 12em;
+	object-fit: cover;
+}
+
+.home article:nth-of-type(1) article h3, 
+.page2 section:nth-of-type(3) article h3 {
 	background-color: var(--color-roze);
 	padding: 5%;
 	color: var(--color-background);
@@ -393,11 +483,287 @@ article:nth-of-type(2) article h3{
 	border-radius: 3em;
 	margin: 5%;
 	font-size: 80%;
+	width: 35%;
+	display: flex;
+	justify-content: center;
 }
 
-article:nth-of-type(2) article h4{
+.home article:nth-of-type(1) article h4,
+.page2 section:nth-of-type(3) article h4 {
 	color: var(--color-h4);
 	font-family: 'DunkinDonutsBold';
-	font-size: 100%;
+	font-size: 120%;
 	margin: 5%;
+}
+
+
+/* STORE FINDER SECTION */
+
+.home .storefinder {
+	background-color: var(--color-roze);
+	text-transform: uppercase;
+	font-family: 'DunkinDonutsBold';
+	padding: 5%;
+	margin: 5%;
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+.home .storefinder h2 {
+	color: var(--color-background);
+	font-size: 250%;
+	line-height: 1.2;
+}
+
+.home .storefinder img:nth-of-type(1) {
+	width: 70vw;
+	height: 32vh;
+	object-fit: cover; 
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	border: .75em solid var(--color-extras);
+}
+
+.home .storefinder img:nth-of-type(2){
+	background-color: var(--color-background);
+	border-radius: 100%;
+	width: 30%;
+	transform: rotate(-20deg);
+	transform: translate(12em, -19em);
+	box-shadow: 3px 3px 10px var(--color-text);
+}
+
+.home .storefinder h3{
+	color: var(--color-background);
+	text-align: center;
+	transform: translateY(-5em);
+}
+
+.home .storefinder a{
+	text-decoration: none;
+	background-color: var(--color-background);
+	color: var(--color-roze);
+	padding: 5%;
+	border-radius: 5em;
+	display: flex;
+	justify-content: center;
+	transform: translateY(-5em);
+}
+
+
+/* FOOTER */
+
+footer div{
+	height: 20em;
+	background-color: var(--color-headertje);
+}
+
+footer ul:nth-of-type(1){
+	list-style-type: none;
+	padding: 5%;
+	transform: translateY(5em);
+}
+
+ .dunkinLogo{
+	width: 40vw;
+	transform: translate(7em, 6em);	
+	background-color: var(--color-andergrijs);
+	border-radius: 5em;
+	box-shadow: 5px 5px 15px  var(--color-text);
+}
+
+footer div li{
+	text-transform: uppercase;
+	font-family: DunkinDonutsBold;
+	background-color: var(--color-buttons-footer);
+	width: 80%;
+	color: var(--color-background);
+	padding: 5%;
+	margin: 5%;
+	text-align: center;
+	border-radius: 2em;
+}
+
+footer nav div:nth-of-type(2){
+	display: flex;
+	justify-content: center;
+}
+
+footer nav div:nth-of-type(2) img{
+	background-color: var(--color-background);
+	object-fit: cover;
+	width: 3%;
+	height: 5%;
+	padding: 5%;
+	border-radius: 10em;
+	transform: translateY(10em);
+}
+
+footer ul:nth-child(2){
+	font-family: 'DunkinDonutsSansBook';
+	color: var(--color-paragraafjes);
+	font-size: 80%;
+	display: flex;
+}
+
+/* PAGE 2 */
+/* EERSTE FOTO */
+
+.dunkindonutsdoos{
+	margin: 25%;
+	width: 350px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 1em;
+	transform: translate(-5em, 2em);
+}
+
+/* EERSTE SECTION */
+
+.page2 section:nth-of-type(1) h3{
+	font-family: DunkinDonutsBold;
+	color: var(--color-headertje);
+	text-transform: uppercase;
+	margin: 5%;
+	font-size: 90%;
+}
+
+.page2 section:nth-of-type(1) h2{
+	font-family: DunkinDonutsBold;
+	margin: 5%;
+	font-size: 110%;
+	line-height: 1.5;
+	color: var(--color-h4);
+}
+
+.page2 section:nth-of-type(1) p{
+	font-family: DunkinDonutsSansBook;
+	margin: 5%;
+	line-height: 1.5;
+	color: var(--color-paragraafjes);
+	font-size: 120%;
+}
+
+.page2 div:nth-of-type(1) img:nth-of-type(2){
+	margin: 5%;
+	width: 350px;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 1em;
+}
+
+.page2 div:nth-of-type(1) img:nth-of-type(3){
+	margin: 5%;
+	width: 350px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 1em;
+}
+
+/* TWEEDE SECTION */
+
+.page2 section:nth-of-type(2) h2{
+	font-family: DunkinDonutsBold;
+	margin: 5%;
+	color: var(--color-h4);
+	font-size: 120%;
+}
+
+.page2 section:nth-of-type(2) p{
+	font-family: DunkinDonutsSansBook;
+	color: var(--color-paragraafjes);
+	margin: 5%;
+	line-height: 1.5;
+}
+
+/* DERDE SECTION */
+
+.page2 section:nth-of-type(3){
+	background-color: var(--color-andergrijs);
+}
+
+.page2 section:nth-of-type(3) h2{
+	font-family: DunkinDonutsBold;
+	margin: 2%;
+	color: var(--color-headertje);
+	font-size: 300%;
+	line-height: .9;
+	text-transform: uppercase;
+	padding: 5%;
+}
+
+.page2 section:nth-of-type(3) h2 span{
+	color: var(--color-roze);
+}
+
+.page2 section:nth-of-type(3) a{
+	transform: translateY(-3em);
+}
+
+/* VIERDE SECTION STOREFINDER */
+
+.page2 section:nth-of-type(4){
+	background-color: var(--color-roze);
+	padding: 5%;
+}
+
+.page2 section:nth-of-type(4) h2{
+	color: var(--color-background);
+	font-family: DunkinDonutsBold;
+	text-transform: uppercase;
+	font-size: 300%;
+	text-align: center;
+	line-height: .9;
+}
+
+.page2 section:nth-of-type(4) article{
+	background-color: var(--color-background);
+	padding: 5%;
+	border-radius: 2em;
+	border: 2px solid var(--color-extras);
+	margin: 0%;
+}
+
+.page2 section:nth-of-type(4) input{
+	width: 90%;
+	border: none;
+	border-bottom: 1px solid var(--color-paragraafjes);
+	padding: 5%;
+	font-family: DunkinDonutsSansBook;
+}
+
+.page2 section:nth-of-type(4) h3{
+	font-family: DunkinDonutsBold;
+	text-transform: uppercase;
+	color: var(--color-roze);
+	font-size: 80%;
+	padding: 2%;
+	border-bottom: 1px solid var(--color-paragraafjes);
+}
+
+.page2 section:nth-of-type(4) h4{
+	font-family: DunkinDonutsBold;
+	text-transform: uppercase;
+	color: var(--color-roze);
+	font-size: 80%;
+	transform: translateX(3em);
+}
+
+.page2 section:nth-of-type(4) ul{
+	list-style-type: none;
+	font-family: DunkinDonutsBold;
+	font-size: 70%;
+}
+
+.page2 section:nth-of-type(4) li:nth-of-type(1),
+.page2 section:nth-of-type(4) li:nth-of-type(2),
+.page2 section:nth-of-type(4) li:nth-of-type(3),
+.page2 section:nth-of-type(4) li:nth-of-type(5) {
+	color: var(--color-paragraafjes);
+}
+
+.page2 section:nth-of-type(4) li:nth-of-type(4){
+	margin: 10px 0px;
+	color: var(--color-text);
 }

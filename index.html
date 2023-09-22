@@ -12,40 +12,44 @@
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
-<body>
+<body class="home">
 	<header>
 		<p>Dunkin' is op zoek naar jou! Bekijk onze <a href="https://www.dunkin.nl/jobs">vacatures</a></p>
-		<img src="/images/nl-logo.svg" alt="nederlands logo">
-		<h1>Dunkin.<span>'</span></h1>
-		<nav>---</nav>
+		<div>
+			<img src="/images/nl-logo.svg" alt="nederlands logo">
+			<h1>Dunkin.<span>'</span></h1>
+			<nav>---</nav>
+		</div>
 	</header>
 
 	<main>
 
-		<article class="eersteartikel">
-			<section>
+		<section>
+			<article>
 				<h2>We love coffee</h2>
 				<img src="/images/Coffee_FX_DD.svg" alt="Koffie achtergrond Dunkin Donuts">
 				<img src="/images/dunkin-donuts-coffee-img.png" alt="dunkin donuts koffie foto">
-			</section>
+				<img src="/images/dunkin-donuts-coffee-img.png" alt="dunkin donuts koffie foto 2">
+				<img src="/images/dunkin-donuts-coffee-img.png" alt="dunkin donuts koffie foto 3">
+			</article>
 
-			<section>
+			<article>
 				<h2>Bestel!</h2>
 				<p>Maak een keuze:</p>
-				<article class="buttons-bestel">
+				<div class="buttons-bestel">
 					<button>Bezorgen</button>
 					<button>Afhalen</button>
-				</article>
-			</section>
+				</div>
+			</article>
 
-			<section>
+			<article>
 				<img src="/images/Ajax_X_DD.png" alt="AJ=jax team met donuts in hun handen">
 				<h2>Dunkin' x ajax!</h2>
-			</section>
-		</article>
+			</article>
+		</section>
 
 
-		<section class="bestel-dunkin-online">
+		<section>
 			<h2>Bestel <span>dunkin'</span> online</h2>
 			<ol>
 				<li>
@@ -73,9 +77,9 @@
 		</section>
 
 
-		<section class="app-jij">
+		<section>
 			<h2>App jij 'm al?</h2>
-			<H3>De dunkin app</H3>
+			<H3>De dunkin' app</H3>
 			<p>Lekker scoren met exclusieve coupons en leuke campagnes met winacties.</p>
 			<img src="/images/button_app_store.svg" alt="Button App Store">
 			<img src="/images/button_google_play.svg" alt="Button Google Play">
@@ -90,7 +94,7 @@
 		</section>
 
 		<section>
-			<img src="images/dunkin-donuts-doos.jpg" alt="donuts in een doos">
+			<img src="images/hello-den-bosch.jpg" alt="donuts in een doos">
 			<h2>Dunkin' komt naar den bosch</h2>
 			<p>Omcirkel de datum alvast in je agenda, op 28 juli as. opent Dunkin' een vestiging in Den Bosch. Om dit te
 				vieren hebben we feestelijke openingsacties bedacht... Bekijk snel onze acties en zorg dat je er optijd
@@ -103,51 +107,68 @@
 
 		<article>
 			<section>
-				<h2>DD <span>Nieuws</span></h2>
+				<h2>DD<br><span>Nieuws</span></h2>
 				<a>Alle blogs</a>
 			</section>
 
-			<article>
-				<img src="/images/kitkat-donuts.png" alt="kitkat donuts">
-				<h3>Nieuw</h3>
-				<h4>Kitkat liefhebbers, opgelet...</h4>
-			</article>
+			<div>
+				<article>
+					<img src="/images/kitkat-donuts.png" alt="kitkat donuts">
+					<h3>Nieuw</h3>
+					<h4>Kitkat liefhebbers, opgelet...</h4>
+				</article>
+
+				<article>
+					<img src="/images/hello-den-bosch.jpg" alt="Hello den bosch opening 28 juli foto">
+					<h3>Winkels</h3>
+					<h4>Omcirkel de datum alvast in je agenda, op 28 juli as. opent Dunkin' een...</h4>
+				</article>
+
+				<article>
+					<img src="/images/donut-day.jpg" alt="Celebrate donut day op vrijdag 2 juni">
+					<h3>Nieuw</h3>
+					<h4>Vrijdag 2 juni is het zover: World Donut Day</h4>
+				</article>
+			</div>
 
 			<button>pijltje</button>
 			<button>pijltje</button>
 		</article>
 
 
-		<section>
-			<h2>Store finders</h2>
+		<article class="storefinder">
+			<h2>Store finder</h2>
 			<img src="images/locaties-winkels.png" alt="Nederland met de locaties van de dunkin donuts">
+			<img src="images/dnkn-logo.svg" alt="logo van dunkin donuts">
 			<h3>Vind een dunkin' in de buurt</h3>
-			<a>Find your store</a>
-		</section>
+			<a href="https://www.dunkin.nl/storefinder">Find your store</a>
+		</article>
+
+		<a href="https://www.dunkin.nl/order-now">order now</a>
 	</main>
 
 	<footer>
-		<img src="/images/dnkn-logo.svg" alt="dunkin donuts logo">
 		<nav>
-			<ul>
-				<li>Storefinder</li>
-				<li>Jobs</li>
-				<li>Blogs</li>
-				<li>Over dunkin'</li>
-			</ul>
+			<img class="dunkinLogo" src="/images/dnkn-logo.svg" alt="dunkin donuts logo">
 
-			<ul>
-				<li>
-					<img src="images/612cc36b6b43b96d27e240e6_TikTok_Orange.svg" alt="Tiktok logo">
-				</li>
-				<li>
-					<img src="images/612741c59719f32469ce47a9_Instagram_Orange.svg" alt="Instagram Logo">
-				</li>
-				<li>
-					<img src="images/612741c59719f37946ce4772_Facebook_Orange.svg" alt="Facebook logo">
-				</li>
-			</ul>
+			<div>
+				<ul>
+					<li>Storefinder</li>
+					<li>Jobs</li>
+					<li>Blogs</li>
+					<li>Over dunkin'</li>
+				</ul>
+			</div>
+
+			<div>
+				<img src="images/612cc36b6b43b96d27e240e6_TikTok_Orange.svg" alt="Tiktok logo">
+				<img src="images/612741c59719f32469ce47a9_Instagram_Orange.svg" alt="Instagram Logo">
+				<img src="images/612741c59719f37946ce4772_Facebook_Orange.svg" alt="Facebook logo">
+			</div>
+
 		</nav>
+
+
 		<ul>
 			<li>2022 DD IP Holder</li>
 			<li>Privacy Policy</li>
