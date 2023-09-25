@@ -80,8 +80,10 @@ header p {
 	padding: 3%;
 	margin: 0%;
 	font-family: 'DunkinDonutsSansBook';
-	font-size: 90%;
+	font-size: 80%;
 	border: none;
+	display: flex;
+	justify-content: center;
 }
 
 header img {
@@ -198,18 +200,18 @@ h1 span {
 	border: none;
 }
 
-.home section:nth-of-type(1) div {
+.home section:nth-of-type(1) article:nth-of-type(2) section {
 	display: flex;
 	justify-content: center;
 	text-decoration: none;
 	gap: 5%;
 }
 
-.home section:nth-of-type(1) div button:nth-child(1) {
+.home section:nth-of-type(1) article:nth-of-type(2) section button:nth-child(1) {
 	color: var(--color-roze);
 }
 
-.home section:nth-of-type(1) div button:nth-child(2) {
+.home section:nth-of-type(1) article:nth-of-type(2) section button:nth-child(2) {
 	background-color: var(--color-accentje);
 	color: var(--color-background);
 }
@@ -245,7 +247,7 @@ h1 span {
 
 /* BESTEL DUNKIN ONLINE SECTION */
 
-.home section:nth-of-type(2) h2 {
+.home main section:nth-of-type(2) h2 {
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	font-size: 400%;
@@ -256,11 +258,11 @@ h1 span {
 	color: var(--color-roze);
 }
 
-.home section:nth-of-type(2) h2 span {
+.home main section:nth-of-type(2) h2 span {
 	color: var(--color-headertje);
 }
 
-.home section:nth-of-type(2) li {
+.home main section:nth-of-type(2) li {
 	display: flex;
 	align-items: center;
 	background-color: var(--color-extras);
@@ -271,11 +273,11 @@ h1 span {
 	gap: 15px;
 }
 
-.home section:nth-of-type(2) ol {
+.home main section:nth-of-type(2) ol {
 	padding: 0%;
 }
 
-.home section:nth-of-type(2) h3 {
+.home main section:nth-of-type(2) h3 {
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
 	color: var(--color-roze);
@@ -284,12 +286,12 @@ h1 span {
 	line-height: 1em;
 }
 
-.home section:nth-of-type(2) p {
+.home main section:nth-of-type(2) p {
 	font-family: DunkinDonutsSansBook;
 	margin: 0%;
 }
 
-.home section:nth-of-type(2) img {
+.home main section:nth-of-type(2) ol img {
 	background-color: var(--color-roze);
 	width: 25%;
 	height: 25%;
@@ -297,7 +299,7 @@ h1 span {
 	padding: 0.8em;
 }
 
-.home section:nth-of-type(2) a {
+.home main section:nth-of-type(2) a {
 	text-decoration: none;
 	background-color: var(--color-headertje);
 	color: var(--color-background);
@@ -446,27 +448,27 @@ main a:last-child,
 	color: var(--color-roze);
 }
 
-.home article:nth-of-type(1) div, 
-.page2 section:nth-of-type(3) div{
+.home article:nth-of-type(1) section:nth-of-type(2), 
+.page2 section:nth-of-type(3) section:nth-of-type(1){
 	display: flex;
 	overflow-x: scroll;
+	scroll-behavior: smooth;
 }
 
 .home article:nth-of-type(1) article, 
-.page2 section:nth-of-type(3) article {
+.page2 section:nth-of-type(1) article {
 	border: .25em solid var(--color-extras);
 	border-radius: 2em;
 	margin: 5%;
 	padding: 5%;
-
+	min-width: 17em;
 }
 
 
 /* BRON: https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
 
 .home article:nth-of-type(1) article img {
-	width: 100%;
-	padding: 5%;
+	width: 90%;
 	border-radius: 2em;
 	margin: 5%;
 	height: 12em;
@@ -476,14 +478,14 @@ main a:last-child,
 .home article:nth-of-type(1) article h3, 
 .page2 section:nth-of-type(3) article h3 {
 	background-color: var(--color-roze);
-	padding: 5%;
+	padding: 4%;
 	color: var(--color-background);
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	border-radius: 3em;
 	margin: 5%;
 	font-size: 80%;
-	width: 35%;
+	width: 25%;
 	display: flex;
 	justify-content: center;
 }
@@ -499,7 +501,7 @@ main a:last-child,
 
 /* STORE FINDER SECTION */
 
-.home .storefinder {
+.home main section:nth-of-type(6) article {
 	background-color: var(--color-roze);
 	text-transform: uppercase;
 	font-family: 'DunkinDonutsBold';
@@ -509,13 +511,13 @@ main a:last-child,
 	overflow: hidden;
 }
 
-.home .storefinder h2 {
+.home main section:nth-of-type(6) article h2 {
 	color: var(--color-background);
 	font-size: 250%;
 	line-height: 1.2;
 }
 
-.home .storefinder img:nth-of-type(1) {
+.home main section:nth-of-type(6) article img:nth-of-type(1) {
 	width: 70vw;
 	height: 32vh;
 	object-fit: cover; 
@@ -525,7 +527,7 @@ main a:last-child,
 	border: .75em solid var(--color-extras);
 }
 
-.home .storefinder img:nth-of-type(2){
+.home main section:nth-of-type(6) article img:nth-of-type(2){
 	background-color: var(--color-background);
 	border-radius: 100%;
 	width: 30%;
@@ -534,13 +536,13 @@ main a:last-child,
 	box-shadow: 3px 3px 10px var(--color-text);
 }
 
-.home .storefinder h3{
+.home main section:nth-of-type(6) article h3{
 	color: var(--color-background);
 	text-align: center;
 	transform: translateY(-5em);
 }
 
-.home .storefinder a{
+.home main section:nth-of-type(6) article a{
 	text-decoration: none;
 	background-color: var(--color-background);
 	color: var(--color-roze);
@@ -552,65 +554,12 @@ main a:last-child,
 }
 
 
-/* FOOTER */
 
-footer div{
-	height: 20em;
-	background-color: var(--color-headertje);
-}
-
-footer ul:nth-of-type(1){
-	list-style-type: none;
-	padding: 5%;
-	transform: translateY(5em);
-}
-
- .dunkinLogo{
-	width: 40vw;
-	transform: translate(7em, 6em);	
-	background-color: var(--color-andergrijs);
-	border-radius: 5em;
-	box-shadow: 5px 5px 15px  var(--color-text);
-}
-
-footer div li{
-	text-transform: uppercase;
-	font-family: DunkinDonutsBold;
-	background-color: var(--color-buttons-footer);
-	width: 80%;
-	color: var(--color-background);
-	padding: 5%;
-	margin: 5%;
-	text-align: center;
-	border-radius: 2em;
-}
-
-footer nav div:nth-of-type(2){
-	display: flex;
-	justify-content: center;
-}
-
-footer nav div:nth-of-type(2) img{
-	background-color: var(--color-background);
-	object-fit: cover;
-	width: 3%;
-	height: 5%;
-	padding: 5%;
-	border-radius: 10em;
-	transform: translateY(10em);
-}
-
-footer ul:nth-child(2){
-	font-family: 'DunkinDonutsSansBook';
-	color: var(--color-paragraafjes);
-	font-size: 80%;
-	display: flex;
-}
 
 /* PAGE 2 */
 /* EERSTE FOTO */
 
-.dunkindonutsdoos{
+.page2 img:first-of-type{
 	margin: 25%;
 	width: 350px;
 	height: 300px;
@@ -645,7 +594,7 @@ footer ul:nth-child(2){
 	font-size: 120%;
 }
 
-.page2 div:nth-of-type(1) img:nth-of-type(2){
+.page2 img:nth-of-type(2){
 	margin: 5%;
 	width: 350px;
 	height: 400px;
@@ -653,7 +602,7 @@ footer ul:nth-child(2){
 	border-radius: 1em;
 }
 
-.page2 div:nth-of-type(1) img:nth-of-type(3){
+.page2 img:nth-of-type(3){
 	margin: 5%;
 	width: 350px;
 	height: 200px;
@@ -681,6 +630,7 @@ footer ul:nth-child(2){
 
 .page2 section:nth-of-type(3){
 	background-color: var(--color-andergrijs);
+	margin: 5%;
 }
 
 .page2 section:nth-of-type(3) h2{
@@ -700,6 +650,7 @@ footer ul:nth-child(2){
 .page2 section:nth-of-type(3) a{
 	transform: translateY(-3em);
 }
+
 
 /* VIERDE SECTION STOREFINDER */
 
@@ -742,7 +693,7 @@ footer ul:nth-child(2){
 	border-bottom: 1px solid var(--color-paragraafjes);
 }
 
-.page2 section:nth-of-type(4) h4{
+.page2 section:nth-of-type(5) h4{
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
 	color: var(--color-roze);
@@ -766,4 +717,64 @@ footer ul:nth-child(2){
 .page2 section:nth-of-type(4) li:nth-of-type(4){
 	margin: 10px 0px;
 	color: var(--color-text);
+}
+
+
+/* FOOTER */
+
+footer section{
+	height: 20em;
+	background-color: var(--color-headertje);
+}
+
+footer ul:nth-of-type(1){
+	list-style-type: none;
+	padding: 5%;
+	transform: translateY(5em);
+}
+
+footer img:first-of-type{
+	width: 40vw;
+	transform: translate(7em, 6em);	
+	background-color: var(--color-andergrijs);
+	border-radius: 5em;
+	box-shadow: 5px 5px 15px  var(--color-text);
+}
+
+footer section:first-of-type li{
+	text-transform: uppercase;
+	font-family: DunkinDonutsBold;
+	background-color: var(--color-buttons-footer);
+	width: 80%;
+	color: var(--color-background);
+	padding: 5%;
+	margin: 5%;
+	text-align: center;
+	border-radius: 2em;
+}
+
+footer section:nth-of-type(2){
+	display: flex;
+	justify-content: center;
+}
+
+
+footer section:nth-of-type(2) img{
+	background-color: var(--color-background);
+	border-radius: 10em;
+	transform: translateY(0em);
+	width: 30%;
+	padding: 5%;
+}
+
+footer section:nth-of-type(2) ul{
+	display: flex;
+}
+
+
+footer ul:nth-child(4){
+	font-family: 'DunkinDonutsSansBook';
+	color: var(--color-paragraafjes);
+	font-size: 80%;
+	display: flex;
 }
