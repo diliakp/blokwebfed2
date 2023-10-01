@@ -162,6 +162,14 @@ BLINDHEID/VOICEOVER:
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+
+⁃ het blauwe tabje zit standaard 3 niveaus lager dan wat de voiceover aangeeft
+⁃ de voiceover neemt geen pauze’s tussen sections
+⁃ zodra er een list item geopend wordt geeft hij dat ook aan (verbeterd)
+⁃ de hele pagina tript wanneer hij voorleest
+⁃ hij spelt de naam bij sommigen
+⁃ hij zegt niet dat het een afbeelding is bij plaatjes! of erna
+
 </details>
 
 
