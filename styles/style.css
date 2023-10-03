@@ -30,7 +30,7 @@ body {
 	--color-roze: #EC128D;
 	--color-accentje: #EC559F;
 	--color-blue: #6FC5EA;
-	--color-paragraafjes: #aaa;
+	--color-paragraafjes: #7d7d7d;
 	--color-andergrijs: #f5f5f5;
 	--color-h4: #512d00;
 	--color-achtergrondplaatje: #DDBC8D;
@@ -39,9 +39,10 @@ body {
 	--color-text2: #fff;
 }
 
-.dark-mode{
+.dark-mode {
 	--color-background: #1c1c1c;
 	--color-paragraafjes: #ffffff;
+	--color-h4: #ffca8a;
 }
 
 img {
@@ -52,19 +53,19 @@ img {
 
 @font-face {
 	font-family: DunkinDonuts;
-	src: url(/fonts/Dunkin.otf);
+	src: url(fonts/Dunkin.otf);
 }
 
 @font-face {
 	font-family: DunkinDonutsBold;
-	src: url(/fonts/Dunkin\ Bold.otf);
+	src: url(fonts/Dunkin\ Bold.otf);
 }
 
 /* https://www.onlinewebfonts.com/fonts */
 
 @font-face {
 	font-family: DunkinDonutsSansBook;
-	src: url(/fonts/Dunkin\ Sans\ Book.ttf);
+	src: url(fonts/Dunkin\ Sans\ Book.ttf);
 }
 
 
@@ -160,6 +161,13 @@ div:nth-of-type(1) h2{
 
 /* HEADER */
 
+@media (prefers-reduced-motion) {
+	* {
+		transition: none !important;
+		animation: none !important;
+	}
+
+}
 
 header {
 	background-color: var(--color-background);
@@ -184,33 +192,32 @@ header div img:nth-child(1) {
 	width: 5%;
 	margin: 6%;
 	border-radius: 40%;
-	z-index: 200;
 }
 
 header div button {
 	background-color: transparent;
-	width: 50%;
+	width: 100%;
 	padding: 0%;
 	border: none;
 	margin: 0%;
 	z-index: -20;
-	transform: translate(18em, -4.5em);
+	transform: translate(12em, -6.5em);
 }
 
-header div button img{
-	transform: scale(2);
+header div button img {
+	transform: scale(1);
 }
 
-header div{
+header div {
 	z-index: 2;
 	background-color: var(--color-background);
 	width: 100%;
 	height: 0em;
-    position: absolute;
-	
+	position: absolute;
+
 }
 
-header section:nth-of-type(1) li{
+header section:nth-of-type(1) li {
 	list-style-type: none;
 	color: var(--color-headertje);
 	font-family: DunkinDonutsBold;
@@ -221,7 +228,7 @@ header section:nth-of-type(1) li{
 	background-color: var(--color-background);
 }
 
-header nav section:nth-of-type(1){
+header nav section:nth-of-type(1) {
 	background-color: var(--color-background);
 	height: 50em;
 	transform: translateY(-6em);
@@ -230,22 +237,22 @@ header nav section:nth-of-type(1){
 	justify-content: center;
 }
 
-header nav section:nth-of-type(1) img{
+header nav section:nth-of-type(1) img {
 	width: 105vw;
 	height: 65vh;
 	transform: translate(-9em, 22em);
 }
 
-header nav section:nth-of-type(1) ul{
+header nav section:nth-of-type(1) ul {
 	transform: translate(12em, 3em);
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(1){
+header nav section:nth-of-type(1) ul li:nth-of-type(1) {
 	animation-name: textBounce;
 	animation-duration: 1.3s;
 }
 
-header nav section:nth-of-type(2) ul img{
+header nav section:nth-of-type(2) ul img {
 	transform: translateY(-17em);
 	margin: 0%;
 	list-style-type: none;
@@ -259,157 +266,157 @@ header nav section:nth-of-type(2) ul img{
 	animation-direction: alternate;
 }
 
-header nav section:nth-of-type(2) ul{
+header nav section:nth-of-type(2) ul {
 	display: flex;
 	justify-content: space-around;
 }
 
 
-@keyframes footerimgs{
-	0%{
+@keyframes footerimgs {
+	0% {
 		scale: 0;
 	}
 
-	10%{
+	10% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
 	header nav section:nth-of-type(2) ul img {
-	  animation-name: none; 
-	  transform: translateY(0); 
+		animation-name: none;
+		transform: translateY(0);
 	}
-  }
-  
+}
+
 
 
 @keyframes textBounce {
-	0%{
+	0% {
 		scale: 0;
 	}
 
-	40%{
+	40% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1.2;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
 
 
-header nav section:nth-of-type(1) ul li:nth-of-type(2){
+header nav section:nth-of-type(1) ul li:nth-of-type(2) {
 	animation-name: textBounce2;
 	animation-duration: 1.3s;
 }
 
-@keyframes textBounce2{
-	0%{
+@keyframes textBounce2 {
+	0% {
 		scale: 0;
 	}
 
-	45%{
+	45% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1.2;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(3){
+header nav section:nth-of-type(1) ul li:nth-of-type(3) {
 	animation-name: textBounce3;
 	animation-duration: 1.3s;
 }
 
-@keyframes textBounce3{
-	0%{
+@keyframes textBounce3 {
+	0% {
 		scale: 0;
 	}
 
-	50%{
+	50% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1.2;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(4){
+header nav section:nth-of-type(1) ul li:nth-of-type(4) {
 	animation-name: textBounce4;
 	animation-duration: 1.4s;
 }
 
-@keyframes textBounce4{
-	0%{
+@keyframes textBounce4 {
+	0% {
 		scale: 0;
 	}
 
-	55%{
+	55% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1.2;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(5){
+header nav section:nth-of-type(1) ul li:nth-of-type(5) {
 	animation-name: textBounce5;
 	animation-duration: 1.5s;
 }
 
-@keyframes textBounce5{
-	0%{
+@keyframes textBounce5 {
+	0% {
 		scale: 0;
 	}
 
-	60%{
+	60% {
 		scale: 0;
 	}
 
-	80%{
+	80% {
 		scale: 1.2;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 	}
 }
 
 
-.hidden{
+.hidden {
 	display: none;
 }
 
-.show{
+.show {
 	display: none;
 }
 
@@ -459,61 +466,64 @@ h1 span {
 	border-radius: 2em;
 }
 
-.home section:nth-of-type(1) img:nth-of-type(2), 
-.home section:nth-of-type(1) img:nth-of-type(3), 
+.home section:nth-of-type(1) img:nth-of-type(2),
+.home section:nth-of-type(1) img:nth-of-type(3),
 .home section:nth-of-type(1) img:nth-of-type(4) {
 	width: 50%;
 	transform: translateY(-228px) scale(.70);
 }
 
-.home section:nth-of-type(1) img:nth-of-type(2){
+.home section:nth-of-type(1) img:nth-of-type(2) {
 	animation-name: koffie-foto-links;
 	animation-duration: 1s;
 }
 
-.home section:nth-of-type(1) img:nth-of-type(3){
+.home section:nth-of-type(1) img:nth-of-type(3) {
 	transform: translateY(-600px) scale(.70) translateX(250px);
 	animation-name: koffie-foto-rechts;
-	animation-duration:1s;
+	animation-duration: 1s;
 }
 
-.home section:nth-of-type(1) img:nth-of-type(4){
+.home section:nth-of-type(1) img:nth-of-type(4) {
 	transform: translateY(-930px) scale(1.1) translateX(80px);
 	animation-name: koffie-foto-midden;
-	animation-duration:1s;
+	animation-duration: 1s;
 
 }
 
 /* animations fotos */
 
-@keyframes koffie-foto-midden{
+@keyframes koffie-foto-midden {
 	0% {
 		scale: .75;
 		opacity: 0;
 	}
-	100%{
+
+	100% {
 		scale: 1;
 		opacity: 1;
 	}
 }
 
-@keyframes koffie-foto-rechts{
-	0%{
+@keyframes koffie-foto-rechts {
+	0% {
 		translate: 3em 0em;
 		opacity: 0;
 	}
-	100%{
+
+	100% {
 		translate: 0em 0em;
 		opacity: 1;
 	}
 }
 
-@keyframes koffie-foto-links{
-	0%{
+@keyframes koffie-foto-links {
+	0% {
 		translate: -3em 0em;
 		opacity: 0;
 	}
-	100%{
+
+	100% {
 		translate: 0em 0em;
 		opacity: 1;
 	}
@@ -530,10 +540,10 @@ h1 span {
 	border-radius: 2em;
 }
 
-.home section:nth-of-type(1) article:nth-of-type(3){
+.home section:nth-of-type(1) article:nth-of-type(3) {
 	position: absolute;
-    transform: translateY(-250px);
-    width: 75%;
+	transform: translateY(-250px);
+	width: 75%;
 }
 
 .home section:nth-of-type(1) article:nth-of-type(2) h2 {
@@ -550,13 +560,13 @@ h1 span {
     margin-left: 3em;
     transform: translate(45px, -55px); */
 
-.home section:nth-of-type(1) article:nth-of-type(3) section:first-child{
+.home section:nth-of-type(1) article:nth-of-type(3) section:first-child {
 	display: flex;
 	justify-content: start;
 }
 
 
-.home section:nth-of-type(1) article:nth-of-type(3) h2{
+.home section:nth-of-type(1) article:nth-of-type(3) h2 {
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	font-size: 120%;
@@ -570,7 +580,7 @@ h1 span {
 	font-family: 'DunkinDonutsSansBook';
 }
 
-.home section:nth-of-type(1) article:nth-of-type(2) p{
+.home section:nth-of-type(1) article:nth-of-type(2) p {
 	text-transform: none;
 }
 
@@ -638,13 +648,13 @@ h1 span {
 	animation-duration: 1s;
 }
 
-@keyframes ajax{
-	0%{
+@keyframes ajax {
+	0% {
 		scale: .5;
 		opacity: 0;
 	}
 
-	100%{
+	100% {
 		scale: 1;
 		opacity: 1;
 	}
@@ -718,7 +728,7 @@ h1 span {
 
 /* APP JIJ M AL SECTION */
 
-.home section:nth-of-type(3) {
+.home main section:nth-of-type(3) {
 	background-color: var(--color-blue);
 	color: var(--color-text2);
 	border-radius: 2em;
@@ -754,12 +764,12 @@ h1 span {
 	animation-direction: alternate;
 }
 
-@keyframes telefoon{
-	0%{
+@keyframes telefoon {
+	0% {
 		translate: 0em 12em;
 	}
 
-	100%{
+	100% {
 		translate: 0em 0em;
 	}
 }
@@ -800,8 +810,7 @@ h1 span {
 .home section:nth-of-type(5) a,
 .home article:nth-of-type(1) a,
 main section:last-of-type a,
-.page2 section:nth-of-type(3) a
-{
+.page2 section:nth-of-type(3) a {
 	background-color: var(--color-headertje);
 	color: var(--color-text2);
 	font-family: 'DunkinDonutsBold';
@@ -868,20 +877,20 @@ main section:last-of-type a,
 	color: var(--color-roze);
 }
 
-.home article:nth-of-type(1) section:nth-of-type(2), 
-.page2 section:nth-of-type(3) section:nth-of-type(1){
+.home article:nth-of-type(1) section:nth-of-type(2),
+.page2 section:nth-of-type(3) section:nth-of-type(1) {
 	display: flex;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
 }
 
-.home article:nth-of-type(1) section:nth-of-type(2)::-webkit-scrollbar, 
-.page2 section:nth-of-type(3) section:nth-of-type(1)::-webkit-scrollbar{	
-		display: none;
+.home article:nth-of-type(1) section:nth-of-type(2)::-webkit-scrollbar,
+.page2 section:nth-of-type(3) section:nth-of-type(1)::-webkit-scrollbar {
+	display: none;
 }
 
 
-.home article:nth-of-type(1) article, 
+.home article:nth-of-type(1) article,
 .page2 section:nth-of-type(1) article {
 	border: .25em solid var(--color-extras);
 	border-radius: 2em;
@@ -901,7 +910,7 @@ main section:last-of-type a,
 	object-fit: cover;
 }
 
-.home article:nth-of-type(1) article:nth-of-type(1) h3, 
+.home article:nth-of-type(1) article:nth-of-type(1) h3,
 .page2 section:nth-of-type(3) article:nth-of-type(1) h3 {
 	background-color: var(--color-roze);
 	padding: 4%;
@@ -916,11 +925,10 @@ main section:last-of-type a,
 	justify-content: center;
 }
 
-.home article:nth-of-type(1) article:nth-of-type(2) h3, 
+.home article:nth-of-type(1) article:nth-of-type(2) h3,
 .page2 section:nth-of-type(3) article:nth-of-type(2) h3,
 .home article:nth-of-type(1) article:nth-of-type(3) h3,
-.page2 section:nth-of-type(3) article:nth-of-type(3) h3
-{
+.page2 section:nth-of-type(3) article:nth-of-type(3) h3 {
 	background-color: var(--color-button-overig);
 	padding: 4%;
 	color: var(--color-text2);
@@ -946,7 +954,7 @@ main section:last-of-type a,
 
 
 .home article:nth-of-type(1) button,
-.page2 section:nth-of-type(3) button{
+.page2 section:nth-of-type(3) button {
 	border: none;
 	transform: translate(7em, -1em);
 	border-radius: 6em;
@@ -973,14 +981,14 @@ main section:last-of-type a,
 .home main section:nth-of-type(6) article img:nth-of-type(1) {
 	width: 70vw;
 	height: 32vh;
-	object-fit: cover; 
+	object-fit: cover;
 	border-radius: 100%;
 	display: flex;
 	justify-content: center;
 	border: .75em solid var(--color-extras);
 }
 
-.home main section:nth-of-type(6) article img:nth-of-type(2){
+.home main section:nth-of-type(6) article img:nth-of-type(2) {
 	background-color: var(--color-background);
 	border-radius: 100%;
 	width: 30%;
@@ -989,13 +997,13 @@ main section:last-of-type a,
 	box-shadow: 3px 3px 10px var(--color-text);
 }
 
-.home main section:nth-of-type(6) article h3{
+.home main section:nth-of-type(6) article h3 {
 	color: var(--color-text2);
 	text-align: center;
 	transform: translateY(-5em);
 }
 
-.home main section:nth-of-type(6) article a{
+.home main section:nth-of-type(6) article a {
 	text-decoration: none;
 	background-color: var(--color-background);
 	color: var(--color-roze);
@@ -1012,18 +1020,18 @@ main section:last-of-type a,
 /* PAGE 2 */
 /* EERSTE FOTO */
 
-.eerstefoto{
-	margin: 5%;
-	width: 300px;
-	height: 300px;
+.eerstefoto {
+	margin-top: 25%;
+	width: 90vw;
+	height: 30vh;
 	object-fit: cover;
 	border-radius: 1em;
-	transform: translate(0em, 2em);
+	transform: translateX(1em);
 }
 
 /* EERSTE SECTION */
 
-.page2 section:nth-of-type(1) h3{
+.page2 section:nth-of-type(1) h3 {
 	font-family: DunkinDonutsBold;
 	color: var(--color-headertje);
 	text-transform: uppercase;
@@ -1031,7 +1039,7 @@ main section:last-of-type a,
 	font-size: 90%;
 }
 
-.page2 section:nth-of-type(1) h2{
+.page2 section:nth-of-type(1) h2 {
 	font-family: DunkinDonutsBold;
 	margin: 5%;
 	font-size: 110%;
@@ -1039,7 +1047,7 @@ main section:last-of-type a,
 	color: var(--color-h4);
 }
 
-.page2 section:nth-of-type(1) p{
+.page2 section:nth-of-type(1) p {
 	font-family: DunkinDonutsSansBook;
 	margin: 5%;
 	line-height: 1.5;
@@ -1047,7 +1055,7 @@ main section:last-of-type a,
 	font-size: 120%;
 }
 
-.page2 img:nth-of-type(2){
+.page2 img:nth-of-type(2) {
 	margin: 5%;
 	width: 350px;
 	height: 400px;
@@ -1055,7 +1063,7 @@ main section:last-of-type a,
 	border-radius: 1em;
 }
 
-.page2 img:nth-of-type(3){
+.page2 img:nth-of-type(3) {
 	margin: 5%;
 	width: 350px;
 	height: 200px;
@@ -1065,14 +1073,14 @@ main section:last-of-type a,
 
 /* TWEEDE SECTION */
 
-.page2 section:nth-of-type(2) h2{
+.page2 section:nth-of-type(2) h2 {
 	font-family: DunkinDonutsBold;
 	margin: 5%;
 	color: var(--color-h4);
 	font-size: 120%;
 }
 
-.page2 section:nth-of-type(2) p{
+.page2 section:nth-of-type(2) p {
 	font-family: DunkinDonutsSansBook;
 	color: var(--color-paragraafjes);
 	margin: 5%;
@@ -1081,12 +1089,12 @@ main section:last-of-type a,
 
 /* DERDE SECTION */
 
-.page2 section:nth-of-type(3){
+.page2 section:nth-of-type(3) {
 	background-color: var(--color-andergrijs);
 	margin: 5%;
 }
 
-.page2 section:nth-of-type(3) h2{
+.page2 section:nth-of-type(3) h2 {
 	font-family: DunkinDonutsBold;
 	margin: 2%;
 	color: var(--color-headertje);
@@ -1096,23 +1104,23 @@ main section:last-of-type a,
 	padding: 5%;
 }
 
-.page2 section:nth-of-type(3) h2 span{
+.page2 section:nth-of-type(3) h2 span {
 	color: var(--color-roze);
 }
 
-.page2 section:nth-of-type(3) a{
+.page2 section:nth-of-type(3) a {
 	transform: translateY(-3em);
 }
 
 
 /* VIERDE SECTION STOREFINDER */
 
-.page2 section:nth-of-type(4){
+.page2 section:nth-of-type(4) {
 	background-color: var(--color-roze);
 	padding: 5%;
 }
 
-.page2 section:nth-of-type(4) h2{
+.page2 section:nth-of-type(4) h2 {
 	color: var(--color-text2);
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
@@ -1121,7 +1129,7 @@ main section:last-of-type a,
 	line-height: .9;
 }
 
-.page2 section:nth-of-type(4) article{
+.page2 section:nth-of-type(4) article {
 	background-color: var(--color-background);
 	padding: 5%;
 	border-radius: 2em;
@@ -1129,7 +1137,7 @@ main section:last-of-type a,
 	margin: 0%;
 }
 
-.page2 section:nth-of-type(4) input{
+.page2 section:nth-of-type(4) input {
 	width: 90%;
 	border: none;
 	border-bottom: 1px solid var(--color-paragraafjes);
@@ -1137,7 +1145,7 @@ main section:last-of-type a,
 	font-family: DunkinDonutsSansBook;
 }
 
-.page2 section:nth-of-type(4) h3{
+.page2 section:nth-of-type(4) h3 {
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
 	color: var(--color-roze);
@@ -1146,7 +1154,7 @@ main section:last-of-type a,
 	border-bottom: 1px solid var(--color-paragraafjes);
 }
 
-.page2 section:nth-of-type(4) h4{
+.page2 section:nth-of-type(4) h4 {
 	font-family: DunkinDonutsBold;
 	text-transform: uppercase;
 	color: var(--color-roze);
@@ -1154,7 +1162,7 @@ main section:last-of-type a,
 	transform: translateX(3em);
 }
 
-.page2 section:nth-of-type(4) ul{
+.page2 section:nth-of-type(4) ul {
 	list-style-type: none;
 	font-family: DunkinDonutsBold;
 	font-size: 70%;
@@ -1167,50 +1175,60 @@ main section:last-of-type a,
 	color: var(--color-paragraafjes);
 }
 
-.page2 section:nth-of-type(4) li:nth-of-type(4){
+.page2 section:nth-of-type(4) li:nth-of-type(4) {
 	margin: 10px 0px;
 	color: var(--color-text);
 }
 
 
+video {
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+}
+
+
+
+
 /* FOOTER */
 
-footer section{
+footer section:nth-of-type(1),
+footer section:nth-of-type(2) {
 	height: 20em;
 	background-color: var(--color-headertje);
 }
 
-footer ul:nth-of-type(1){
+footer ul:nth-of-type(1) {
 	list-style-type: none;
 	padding: 5%;
 	transform: translateY(5em);
 }
 
-.dunkin-foto{
+.dunkin-foto {
 	width: 40vw;
-	transform: translate(7em, 6em);	
+	transform: translate(7em, 6em);
 	background-color: var(--color-andergrijs);
 	border-radius: 5em;
-	box-shadow: 2px 2px 5px  var(--color-text);
+	box-shadow: 2px 2px 5px var(--color-text);
 	animation-name: dunkin-logo;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
-@keyframes dunkin-logo{
-    0%{
-        transform: translate(7em, 6em) rotate(0deg); 
-    }
+@keyframes dunkin-logo {
+	0% {
+		transform: translate(7em, 6em) rotate(0deg);
+	}
 
-    100%{
-        transform: translate(7em, 6em) rotate(360deg); 
-    }
+	100% {
+		transform: translate(7em, 6em) rotate(360deg);
+	}
 }
 
 
 
-footer section:first-of-type li{
+footer section:first-of-type li {
 	text-transform: uppercase;
 	font-family: DunkinDonutsBold;
 	background-color: var(--color-buttons-footer);
@@ -1222,16 +1240,16 @@ footer section:first-of-type li{
 	border-radius: 2em;
 }
 
-footer section:nth-of-type(2){
+footer section:nth-of-type(2) {
 	display: flex;
 	justify-content: center;
 }
 
-footer section:nth-of-type(2) a{
+footer section:nth-of-type(2) a {
 	height: 100vh;
 }
 
-footer section:nth-of-type(2) img{
+footer section:nth-of-type(2) img {
 	background-color: var(--color-text2);
 	border-radius: 10em;
 	transform: translateY(0em);
@@ -1241,14 +1259,25 @@ footer section:nth-of-type(2) img{
 	display: flex;
 }
 
-footer section:nth-of-type(2) ul{
+footer section:nth-of-type(2) ul {
 	display: flex;
 	gap: 10%;
 }
 
-footer ul:nth-child(4){
+footer ul:nth-child(4) {
 	font-family: 'DunkinDonutsSansBook';
 	color: var(--color-paragraafjes);
 	font-size: 80%;
 	display: flex;
+}
+
+footer section:nth-of-type(3) {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 70%;
+	background-color: var(--color-extras);
+	text-align: center;
+	padding: 3px 0;
+	z-index: 999;
 }

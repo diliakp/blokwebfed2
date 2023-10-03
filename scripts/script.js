@@ -21,9 +21,6 @@ if(buttonLeft == 0){
 }
 
 
-
-
-
 // hamburgermenu openen en sluiten
 var menuButton = document.querySelector('header div button:nth-of-type(1)');
 var kruisje = document.querySelector('header div button:nth-of-type(2)');
@@ -75,12 +72,21 @@ if(buttonAfhalen == 0){
 function toggleDarkMode() {
     var body = document.body;
     body.classList.toggle('dark-mode');
+    approvedSound();
  }
 
  var darkModeToggle = document.querySelector('header div img:nth-of-type(1)');
  darkModeToggle.addEventListener('click', toggleDarkMode);
 
-   
+
+
+//  https://pixabay.com/sound-effects/search/sparkle/
+
+ function approvedSound() {
+    var audio = new Audio('audios/sound-effect-twinklesparkle-115095.mp3');
+    audio.play();
+}
+
 
 
 
