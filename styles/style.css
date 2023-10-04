@@ -53,19 +53,19 @@ img {
 
 @font-face {
 	font-family: DunkinDonuts;
-	src: url(fonts/Dunkin.woff);
+	src: url(/fonts/Dunkin.woff);
 }
 
 @font-face {
 	font-family: DunkinDonutsBold;
-	src: url(fonts/Dunkin-Bold.woff);
+	src: url(/fonts/Dunkin-Bold.woff);
 }
 
 /* https://www.onlinewebfonts.com/fonts */
 
 @font-face {
 	font-family: DunkinDonutsSansBook;
-	src: url(fonts/Dunkin-Sans-Book.woff);
+	src: url(/fonts/Dunkin-Sans-Book.woff);
 }
 
 
@@ -244,7 +244,7 @@ header nav section:nth-of-type(1) img {
 }
 
 header nav section:nth-of-type(1) ul {
-	transform: translate(12em, 3em);
+	transform: translate(11.5em, 3em);
 }
 
 header nav section:nth-of-type(1) ul li:nth-of-type(1) {
@@ -253,7 +253,7 @@ header nav section:nth-of-type(1) ul li:nth-of-type(1) {
 }
 
 header nav section:nth-of-type(2) ul img {
-	transform: translateY(-17em);
+	transform: translateY(-18em);
 	margin: 0%;
 	list-style-type: none;
 	width: 7vw;
@@ -431,6 +431,11 @@ h1 {
 
 h1 span {
 	color: var(--color-roze)
+}
+
+
+.whitemode {
+    transition: transform .5s ease;
 }
 
 

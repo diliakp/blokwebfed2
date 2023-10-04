@@ -3,22 +3,41 @@ console.log("hi");
 
 
 // section foto's laten scrollen horizontaal
+// var scrollContainer = document.querySelector('.home article:nth-of-type(1) section:nth-of-type(2)');
+// var buttonLeft = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(1)');
+// var buttonRight = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(2)');
+
+
+// if(buttonLeft == 0){
+//     buttonLeft.addEventListener('click', function(){
+//         scrollContainer.scrollLeft -= 350;
+//     });
+    
+//     buttonRight.addEventListener('click', function(){
+//         scrollContainer.scrollLeft += 350;
+//     });    
+// }else{
+
+// }
+
 var scrollContainer = document.querySelector('.home article:nth-of-type(1) section:nth-of-type(2)');
 var buttonLeft = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(1)');
 var buttonRight = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(2)');
 
+var shouldAddEventListeners = true; 
 
-if(buttonLeft == 0){
+if (shouldAddEventListeners) {
     buttonLeft.addEventListener('click', function(){
         scrollContainer.scrollLeft -= 350;
     });
-    
+
     buttonRight.addEventListener('click', function(){
         scrollContainer.scrollLeft += 350;
-    });    
-}else{
-
+    });
+} else {
+   
 }
+
 
 
 // hamburgermenu openen en sluiten
@@ -48,24 +67,22 @@ kruisje.addEventListener("click", closeMenu);
 // section tevoorschijn laten komen na het drukken op een knop
 var bestelContainer = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3)');
 var buttonAfhalen = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(2) section button:nth-child(2)');
-var buttonTerug = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3) section img')
+var buttonTerug = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3) section img');
 
 
+buttonAfhalen.addEventListener('click', function(){
+    if (bestelContainer.classList.contains('hidden')) {
+        bestelContainer.classList.remove('hidden'); 
+    }
+});
 
-if(buttonAfhalen == 0){
-    bestelContainer.classList.toggle('hidden');
 
-    buttonAfhalen.addEventListener('click', function(){
-        bestelContainer.classList.toggle('hidden');
-    });
-    
-    buttonTerug.addEventListener('click', function(){
-        bestelContainer.classList.toggle('show');
-    });
-    
-}else{
+buttonTerug.addEventListener('click', function(){
+    if (!bestelContainer.classList.contains('hidden')) {
+        bestelContainer.classList.add('hidden'); 
+    }
+});
 
-}
 
 
 // dark mode
@@ -79,7 +96,6 @@ function toggleDarkMode() {
  darkModeToggle.addEventListener('click', toggleDarkMode);
 
 
-
 //  https://pixabay.com/sound-effects/search/sparkle/
 
  function approvedSound() {
@@ -87,27 +103,15 @@ function toggleDarkMode() {
     audio.play();
 }
 
+// rotating image
 
+// Get the rotating image element
+var rotatingImage = document.querySelector(".whitemode");
 
+var rotationDegree = 0;
 
-// var homepage = document.querySelector('.home')
-// var pagina2 = document.querySelector('.page2')
-// if(homepage !== undefined){
-//     function toggleDarkMode() {
-//         var body = document.body;
-//         body.classList.toggle('dark-mode');
-//      }
-
-//     var darkModeToggle = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(1) img:nth-of-type(1)');
-//     darkModeToggle.addEventListener('click', toggleDarkMode);
-// }else if(pagina2 !== undefined){
-//     function toggleDarkMode2() {
-//         var body = document.body;
-//         body.classList.toggle('dark-mode');
-//      }
-
-//     var darkModeToggle2 = document.querySelector('.page2 section:nth-of-type(1) img:nth-of-type(1)');
-//     darkModeToggle2.addEventListener('click', toggleDarkMode2);
-// }else{
-
-// }
+rotatingImage.addEventListener("click", () => {
+    rotationDegree += 180;
+    
+    rotatingImage.style.transform = `rotate(${rotationDegree}deg)`;
+});
