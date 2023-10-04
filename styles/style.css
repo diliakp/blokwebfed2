@@ -98,9 +98,6 @@ header p {
 }
 
 h1 {
-	/* display: flex;
-	justify-content: center;
-	margin-top: -20%; */
 	font-family: 'DunkinDonutsBold';
 	text-transform: uppercase;
 	color: var(--color-headertje);
@@ -121,19 +118,16 @@ header div section img:nth-child(1) {
 
 header div section button {
 	background-color: transparent;
-	width: 100%;
-	padding: 0%;
 	border: none;
 	margin: 0%;
 	z-index: -20;
-	/* transform: translate(12em, -6.5em); */
+	scale: 9;
 }
 
 
 header div {
 	z-index: 2;
 	background-color: var(--color-background);
-	/* height: 0em; */
 	position: absolute;
 }
 
@@ -142,7 +136,7 @@ header div section {
 	justify-content: space-between;
 }
 
-header section:nth-of-type(2) li {
+header nav section:nth-of-type(1) li {
 	list-style-type: none;
 	color: var(--color-headertje);
 	font-family: DunkinDonutsBold;
@@ -153,32 +147,32 @@ header section:nth-of-type(2) li {
 	background-color: var(--color-background);
 }
 
-header nav section:nth-of-type(2) {
+header nav section:nth-of-type(1) {
 	background-color: var(--color-background);
 	height: 50em;
-	transform: translateY(-6em);
+	transform: translateY(2em);
 	display: flex;
 	align-items: start;
 	justify-content: center;
 }
 
-header nav section:nth-of-type(2) img {
+header nav section:nth-of-type(1) img {
 	width: 105vw;
 	height: 65vh;
 	transform: translate(-9em, 22em);
 }
 
-header nav section:nth-of-type(2) ul {
-	transform: translate(11.5em, 3em);
+header nav section:nth-of-type(1) ul {
+	transform: translate(12em, 3em);
 }
 
-header nav section:nth-of-type(2) ul li:nth-of-type(1) {
+header nav section:nth-of-type(1) ul li:nth-of-type(1) {
 	animation-name: textBounce;
 	animation-duration: 1.3s;
 }
 
-header nav section:nth-of-type(3) ul img {
-	transform: translateY(-18em);
+header nav section:nth-of-type(2) ul img {
+	transform: translateY(-12em);
 	margin: 0%;
 	list-style-type: none;
 	width: 7vw;
@@ -191,9 +185,13 @@ header nav section:nth-of-type(3) ul img {
 	animation-direction: alternate;
 }
 
-header nav section:nth-of-type(3) ul {
+
+
+header nav section:nth-of-type(2) ul {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	transform: translateX(5em);
+	
 }
 
 
@@ -236,7 +234,7 @@ header nav section:nth-of-type(3) ul {
 
 
 
-header nav section:nth-of-type(2) ul li:nth-of-type(2) {
+header nav section:nth-of-type(1) ul li:nth-of-type(2) {
 	animation-name: textBounce2;
 	animation-duration: 1.3s;
 }
@@ -259,7 +257,7 @@ header nav section:nth-of-type(2) ul li:nth-of-type(2) {
 	}
 }
 
-header nav section:nth-of-type(2) ul li:nth-of-type(3) {
+header nav section:nth-of-type(1) ul li:nth-of-type(3) {
 	animation-name: textBounce3;
 	animation-duration: 1.3s;
 }
@@ -282,7 +280,7 @@ header nav section:nth-of-type(2) ul li:nth-of-type(3) {
 	}
 }
 
-header nav section:nth-of-type(2) ul li:nth-of-type(4) {
+header nav section:nth-of-type(1) ul li:nth-of-type(4) {
 	animation-name: textBounce4;
 	animation-duration: 1.4s;
 }
@@ -305,7 +303,7 @@ header nav section:nth-of-type(2) ul li:nth-of-type(4) {
 	}
 }
 
-header nav section:nth-of-type(2) ul li:nth-of-type(5) {
+header nav section:nth-of-type(1) ul li:nth-of-type(5) {
 	animation-name: textBounce5;
 	animation-duration: 1.5s;
 }
@@ -1182,7 +1180,7 @@ footer section:nth-of-type(3) {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 60%;
 	background-color: var(--color-extras);
 	text-align: center;
 	padding: 3px 0;

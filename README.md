@@ -205,19 +205,26 @@ Deze meeting kon ik niet bij zijn omdat ik een uitvaart had, maar ik heb wel thu
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/scherm1.png" alt="uitomst opdracht 1">
+  <img src="readme-images/scherm2.png"  alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+<img src="readme-images/section-deel.png" alt="deel wat goed ging">
+<img src="readme-images/hamburger-menu.png" alt="deel wat goed ging">
 
+  wat er goed gegaan is:
+  - nieuwe javascript onderdelen
+  - nieuwe css elementen
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/hamburger-menu.png" alt="bummer">
+
+  Ik heb dit last minute geprobeerd aan te passen maar het is niet gelukt
 </details>
 
 
