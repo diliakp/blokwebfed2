@@ -13,11 +13,6 @@ body {
 	background-color: var(--color-background);
 }
 
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -76,89 +71,6 @@ img {
 /* jouw code */
 
 /* HOMEPAGE */
-/* div:nth-of-type(1){
-	background-color: var(--color-headertje);
-	color: var(--color-background);
-	text-transform: uppercase;
-	font-family: DunkinDonutsBold;
-	text-align: center;
-	height: 100vh;
-	margin: 0%;
-	font-size: 250%;
-    animation: loading 3s linear infinite; 
-	transform: translateY(-1.3em);
-}
-
-div:nth-of-type(1) h2{
-	transform: translateY(6em);
-}
-
-
-@keyframes loading{
-	0% {
-		translate: 0em 0em ;
-	}
-    100% {
-       translate: 0em -10em;
-	}
-} */
-
-
-
-/* .loader{
-	width: 100%;
-    height: 100vh;
-    background: var(--color-headertje); 
-	color: var(--color-background);
-	text-transform: uppercase;
-	font-family: dunkindonutsbold;
-	font-size: 300%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader div{
-	text-align: center;
-}
-
-.loader div h2{
-	animation-name: bouncy-text;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-}
-
-.liquid-animation{
-	animation: liquid-up 1s forwards;
-}
-
-@keyframes bouncy-text{
-	0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-@keyframes liquid-up {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-} */
-
 /* HEADER */
 
 @media (prefers-reduced-motion) {
@@ -166,7 +78,6 @@ div:nth-of-type(1) h2{
 		transition: none !important;
 		animation: none !important;
 	}
-
 }
 
 header {
@@ -186,7 +97,21 @@ header p {
 	justify-content: center;
 }
 
-header div img:nth-child(1) {
+h1 {
+	/* display: flex;
+	justify-content: center;
+	margin-top: -20%; */
+	font-family: 'DunkinDonutsBold';
+	text-transform: uppercase;
+	color: var(--color-headertje);
+}
+
+h1 span {
+	color: var(--color-roze)
+}
+
+
+header div section img:nth-child(1) {
 	background-color: var(--color-extras);
 	padding: 3%;
 	width: 5%;
@@ -194,30 +119,30 @@ header div img:nth-child(1) {
 	border-radius: 40%;
 }
 
-header div button {
+header div section button {
 	background-color: transparent;
 	width: 100%;
 	padding: 0%;
 	border: none;
 	margin: 0%;
 	z-index: -20;
-	transform: translate(12em, -6.5em);
+	/* transform: translate(12em, -6.5em); */
 }
 
-header div button img {
-	transform: scale(1);
-}
 
 header div {
 	z-index: 2;
 	background-color: var(--color-background);
-	width: 100%;
-	height: 0em;
+	/* height: 0em; */
 	position: absolute;
-
 }
 
-header section:nth-of-type(1) li {
+header div section {
+	display: flex;
+	justify-content: space-between;
+}
+
+header section:nth-of-type(2) li {
 	list-style-type: none;
 	color: var(--color-headertje);
 	font-family: DunkinDonutsBold;
@@ -228,7 +153,7 @@ header section:nth-of-type(1) li {
 	background-color: var(--color-background);
 }
 
-header nav section:nth-of-type(1) {
+header nav section:nth-of-type(2) {
 	background-color: var(--color-background);
 	height: 50em;
 	transform: translateY(-6em);
@@ -237,22 +162,22 @@ header nav section:nth-of-type(1) {
 	justify-content: center;
 }
 
-header nav section:nth-of-type(1) img {
+header nav section:nth-of-type(2) img {
 	width: 105vw;
 	height: 65vh;
 	transform: translate(-9em, 22em);
 }
 
-header nav section:nth-of-type(1) ul {
+header nav section:nth-of-type(2) ul {
 	transform: translate(11.5em, 3em);
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(1) {
+header nav section:nth-of-type(2) ul li:nth-of-type(1) {
 	animation-name: textBounce;
 	animation-duration: 1.3s;
 }
 
-header nav section:nth-of-type(2) ul img {
+header nav section:nth-of-type(3) ul img {
 	transform: translateY(-18em);
 	margin: 0%;
 	list-style-type: none;
@@ -266,7 +191,7 @@ header nav section:nth-of-type(2) ul img {
 	animation-direction: alternate;
 }
 
-header nav section:nth-of-type(2) ul {
+header nav section:nth-of-type(3) ul {
 	display: flex;
 	justify-content: space-around;
 }
@@ -290,14 +215,6 @@ header nav section:nth-of-type(2) ul {
 	}
 }
 
-@media (prefers-reduced-motion: reduce) {
-	header nav section:nth-of-type(2) ul img {
-		animation-name: none;
-		transform: translateY(0);
-	}
-}
-
-
 
 @keyframes textBounce {
 	0% {
@@ -319,7 +236,7 @@ header nav section:nth-of-type(2) ul {
 
 
 
-header nav section:nth-of-type(1) ul li:nth-of-type(2) {
+header nav section:nth-of-type(2) ul li:nth-of-type(2) {
 	animation-name: textBounce2;
 	animation-duration: 1.3s;
 }
@@ -342,7 +259,7 @@ header nav section:nth-of-type(1) ul li:nth-of-type(2) {
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(3) {
+header nav section:nth-of-type(2) ul li:nth-of-type(3) {
 	animation-name: textBounce3;
 	animation-duration: 1.3s;
 }
@@ -365,7 +282,7 @@ header nav section:nth-of-type(1) ul li:nth-of-type(3) {
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(4) {
+header nav section:nth-of-type(2) ul li:nth-of-type(4) {
 	animation-name: textBounce4;
 	animation-duration: 1.4s;
 }
@@ -388,7 +305,7 @@ header nav section:nth-of-type(1) ul li:nth-of-type(4) {
 	}
 }
 
-header nav section:nth-of-type(1) ul li:nth-of-type(5) {
+header nav section:nth-of-type(2) ul li:nth-of-type(5) {
 	animation-name: textBounce5;
 	animation-duration: 1.5s;
 }
@@ -420,22 +337,8 @@ header nav section:nth-of-type(1) ul li:nth-of-type(5) {
 	display: none;
 }
 
-h1 {
-	display: flex;
-	justify-content: center;
-	margin-top: -20%;
-	font-family: 'DunkinDonutsBold';
-	text-transform: uppercase;
-	color: var(--color-headertje);
-}
-
-h1 span {
-	color: var(--color-roze)
-}
-
-
 .whitemode {
-    transition: transform .5s ease;
+	transition: transform .5s ease;
 }
 
 
@@ -511,27 +414,27 @@ h1 span {
 }
 
 @keyframes koffie-foto-rechts {
-    0% {
-        transform: translateY(3em);
+	0% {
+		transform: translateY(3em);
 		opacity: 0;
-    }
+	}
 
-    100% {
-        transform: translateY(0);
+	100% {
+		transform: translateY(0);
 		opacity: 1;
-    }
+	}
 }
 
 @keyframes koffie-foto-links {
-    0% {
-        transform: translateY(-3em);
-        opacity: 0;
-    }
+	0% {
+		transform: translateY(-3em);
+		opacity: 0;
+	}
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 
@@ -561,10 +464,6 @@ h1 span {
 	font-size: 300%;
 	margin: 0%;
 }
-
-/* margin-top: -2.5em;
-    margin-left: 3em;
-    transform: translate(45px, -55px); */
 
 .home section:nth-of-type(1) article:nth-of-type(3) section:first-child {
 	display: flex;
@@ -636,6 +535,10 @@ h1 span {
 	text-decoration: none;
 }
 
+.home section:nth-of-type(1) article:nth-of-type(4) a {
+	text-decoration: none;
+}
+
 .home section:nth-of-type(1) article:nth-of-type(4) h2 {
 	text-transform: uppercase;
 	font-size: 300%;
@@ -645,7 +548,6 @@ h1 span {
 	transform: translateY(-12em);
 	color: var(--color-text2);
 	text-decoration: none;
-
 }
 
 .home section:nth-of-type(1) article:nth-of-type(4) img {
@@ -771,15 +673,15 @@ h1 span {
 }
 
 @keyframes telefoon {
-    0% {
-        transform: translateY(12em);
+	0% {
+		transform: translateY(12em);
 		scale: 2;
-    }
+	}
 
-    100% {
-        transform: translateY(1.5em);
+	100% {
+		transform: translateY(1.5em);
 		scale: 2;
-    }
+	}
 }
 
 
@@ -1196,9 +1098,6 @@ video {
 	margin: 5%;
 }
 
-
-
-
 /* FOOTER */
 
 footer section:nth-of-type(1),
@@ -1235,8 +1134,6 @@ footer ul:nth-of-type(1) {
 	}
 }
 
-
-
 footer section:first-of-type li {
 	text-transform: uppercase;
 	font-family: DunkinDonutsBold;
@@ -1271,6 +1168,7 @@ footer section:nth-of-type(2) img {
 footer section:nth-of-type(2) ul {
 	display: flex;
 	gap: 10%;
+	margin-bottom: 20em;
 }
 
 footer ul:nth-child(4) {
@@ -1284,7 +1182,7 @@ footer section:nth-of-type(3) {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 70%;
+	width: 100%;
 	background-color: var(--color-extras);
 	text-align: center;
 	padding: 3px 0;

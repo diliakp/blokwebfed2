@@ -240,4 +240,5 @@ Deze meeting kon ik niet bij zijn omdat ik een uitvaart had, maar ik heb wel thu
   5. https://www.youtube.com/watch?v=3HrQoNSDBHc 
   6. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate 
   7. thije, leon en paulien als studentenassistenten
+  8. sanne bij javascript
 </details>
