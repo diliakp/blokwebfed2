@@ -53,19 +53,19 @@ img {
 
 @font-face {
 	font-family: DunkinDonuts;
-	src: url(/fonts/Dunkin.woff);
+	src: url(fonts/Dunkin.woff);
 }
 
 @font-face {
 	font-family: DunkinDonutsBold;
-	src: url(/fonts/Dunkin-Bold.woff);
+	src: url(fonts/Dunkin-Bold.woff);
 }
 
 /* https://www.onlinewebfonts.com/fonts */
 
 @font-face {
 	font-family: DunkinDonutsSansBook;
-	src: url(/fonts/Dunkin-Sans-Book.woff);
+	src: url(fonts/Dunkin-Sans-Book.woff);
 }
 
 
