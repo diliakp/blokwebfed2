@@ -2,44 +2,6 @@
 console.log("hi");
 
 
-// section foto's laten scrollen horizontaal
-// var scrollContainer = document.querySelector('.home article:nth-of-type(1) section:nth-of-type(2)');
-// var buttonLeft = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(1)');
-// var buttonRight = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(2)');
-
-
-// if(buttonLeft == 0){
-//     buttonLeft.addEventListener('click', function(){
-//         scrollContainer.scrollLeft -= 350;
-//     });
-    
-//     buttonRight.addEventListener('click', function(){
-//         scrollContainer.scrollLeft += 350;
-//     });    
-// }else{
-
-// }
-
-var scrollContainer = document.querySelector('.home article:nth-of-type(1) section:nth-of-type(2)');
-var buttonLeft = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(1)');
-var buttonRight = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(2)');
-
-var shouldAddEventListeners = true; 
-
-if (shouldAddEventListeners) {
-    buttonLeft.addEventListener('click', function(){
-        scrollContainer.scrollLeft -= 350;
-    });
-
-    buttonRight.addEventListener('click', function(){
-        scrollContainer.scrollLeft += 350;
-    });
-} else {
-   
-}
-
-
-
 // hamburgermenu openen en sluiten
 var menuButton = document.querySelector('header div button:nth-of-type(1)');
 var kruisje = document.querySelector('header div button:nth-of-type(2)');
@@ -64,26 +26,6 @@ menuButton.addEventListener("click", openMenu);
 kruisje.addEventListener("click", closeMenu);
 
 
-// section tevoorschijn laten komen na het drukken op een knop
-var bestelContainer = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3)');
-var buttonAfhalen = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(2) section button:nth-child(2)');
-var buttonTerug = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3) section img');
-
-
-buttonAfhalen.addEventListener('click', function(){
-    if (bestelContainer.classList.contains('hidden')) {
-        bestelContainer.classList.remove('hidden'); 
-    }
-});
-
-
-buttonTerug.addEventListener('click', function(){
-    if (!bestelContainer.classList.contains('hidden')) {
-        bestelContainer.classList.add('hidden'); 
-    }
-});
-
-
 
 // dark mode
 function toggleDarkMode() {
@@ -105,13 +47,50 @@ function toggleDarkMode() {
 
 // rotating image
 
-// Get the rotating image element
 var rotatingImage = document.querySelector(".whitemode");
-
 var rotationDegree = 0;
-
 rotatingImage.addEventListener("click", () => {
     rotationDegree += 180;
-    
     rotatingImage.style.transform = `rotate(${rotationDegree}deg)`;
 });
+
+
+// section tevoorschijn laten komen na het drukken op een knop
+var bestelContainer = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3)');
+var buttonAfhalen = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(2) section button:nth-child(2)');
+var buttonTerug = document.querySelector('.home section:nth-of-type(1) article:nth-of-type(3) section img');
+
+if(buttonAfhalen){
+    buttonAfhalen.addEventListener('click', function(){
+        if (bestelContainer.classList.contains('hidden')) {
+            bestelContainer.classList.remove('hidden'); 
+        }
+    });
+    
+    
+    buttonTerug.addEventListener('click', function(){
+        if (!bestelContainer.classList.contains('hidden')) {
+            bestelContainer.classList.add('hidden'); 
+        }
+    });
+}
+
+
+
+// section foto's laten scrollen horizontaal
+var scrollContainer = document.querySelector('.home article:nth-of-type(1) section:nth-of-type(2)');
+var buttonLeft = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(1)');
+var buttonRight = document.querySelector('.home article:nth-of-type(1) button:nth-of-type(2)');
+
+
+if(buttonLeft){
+    buttonLeft.addEventListener('click', function(){
+        scrollContainer.scrollLeft -= 350;
+    });
+    
+    buttonRight.addEventListener('click', function(){
+        scrollContainer.scrollLeft += 350;
+    });    
+}else{
+
+}

@@ -511,28 +511,29 @@ h1 span {
 }
 
 @keyframes koffie-foto-rechts {
-	0% {
-		translate: 3em 0em;
+    0% {
+        transform: translateY(3em);
 		opacity: 0;
-	}
+    }
 
-	100% {
-		translate: 0em 0em;
+    100% {
+        transform: translateY(0);
 		opacity: 1;
-	}
+    }
 }
 
 @keyframes koffie-foto-links {
-	0% {
-		translate: -3em 0em;
-		opacity: 0;
-	}
+    0% {
+        transform: translateY(-3em);
+        opacity: 0;
+    }
 
-	100% {
-		translate: 0em 0em;
-		opacity: 1;
-	}
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 
 
 /* BESTEL SECTION */
@@ -770,14 +771,17 @@ h1 span {
 }
 
 @keyframes telefoon {
-	0% {
-		translate: 0em 12em;
-	}
+    0% {
+        transform: translateY(12em);
+		scale: 2;
+    }
 
-	100% {
-		translate: 0em 0em;
-	}
+    100% {
+        transform: translateY(1.5em);
+		scale: 2;
+    }
 }
+
 
 /* OPROEP AAN VEGANS SECTION */
 
